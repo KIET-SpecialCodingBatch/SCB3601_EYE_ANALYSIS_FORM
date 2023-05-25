@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye analysis</title>
+<div id="helo2">
+    <h1><em><div align=middle>EYE ANALYSIS FORM</div></em></h1><img src="/static/eyelogo2.jpg" align=middle width="200px" height="150px"/>
+    <link rel="stylesheet" type=text/css href="{{url_for('static', filename='design.css') }}">  
+</head>
+
+<body>
+    <br><br>
+    <hr width="2000px" align='middle'>
+    <pre><div align=middle><h2><i>Patient Details</i></h2></div><big>
+        Name: {{Name}}                                                                                                  Date:{{Date}}
+        
+   Age : {{Age}}                                                                                                            Time:{{Time}}
+        
+    Gender:{{Gender}}<br>
+    </big><hr width="2000px" align=middle><div align="middle" ><h2><i>Test Results</i></h2></div>
+        <div align=left>
+          
+<b>        DISEASE                        RESULT</b>
+
+        Myopiais                      : {{Myopia}}
+        
+        Hypermetropiais               : {{Hypermetropia}}
+        
+        Wet_AMDis                     : {{Wet_AMD}}
+        
+        Dry_AMDis                     : {{Dry_AMD}}
+        
+        Cataractis                    : {{Cataract}}
+
+        Diabetic_Retinopathyis        : {{Diabetic_Retinopathy}}
+
+        Glaucomais                    : {{Glaucoma}}
+    </div></big></pre>
+        <h2><div align=middle>HERE ARE THE CONCLUSIONS OF THE ANALYSIS</div></h2>
+        <p><h4><div align=left>
+        {% if Myopia=="Yes" or Myopia=="yes" %}
+            <p>As per analyis you may have <b>MYOPIA</b>, it can be cured by using the correcting lenses or surgery.<br>
+                Some natural treatment options can help slow the progression of myopia are:
+                <ul>
+                    <li>Decrease the exposure to sunlight</li>
+                    <li>Eat green leafy vegetables</li>
+                    <li>Reduce eye strain</li>
+                    <li>Do not smoke</li>
+                </ul>
+                <ul>
+                    <li>Vitamin C: guava,kiwi,oranges,berries,greens like kale</li>
+                    <li>Vitamin A: egg yolks,liver,grass-fed butter,cod liver oil</li>
+                    <li>Omega-3 fatty acid: salmon,sardines,trout,walnuts,flaxseeds</li>
+                    <li>Yellow & Red-fleshed fruits and vegetables: carrots,sweet potatoes,pumpkin,butternut,tomatoes,apricots,red bell peppers</li>
+                    <li>Green leafy vegetables: spinach,kale,swiss chard,broccoli</li>
+                </ul>
+                
+                <!--<br><img src="/D:\project\images"-->
+            </p>
+        {% endif %}
+        {% if Hypermetropia=="Yes" or Hypermetropia=="yes" %}
+            <p>As per the results, you may have <b>HYPERMETROPIA</b>, it can be cured by using the correcting lenses or surgery.
+                <br>Some natural treatment options can help slow the progression of myopia are: 
+<br>
+                <ul>
+                    <li>Vitamin A: carrots</li>
+                    <li>Vitamin B: whole grains, leafy vegetables, nuts</li>
+                    <li>Vitamin C: citrus fruits like lemons, oranges, grapes</li>
+                    <li>Bioflavonoids: Pomegranate</li>
+                    <li>High Zinc foods</li>
+                </ul>
+            </p>
+        {% endif %}
+        {% if Wet_AMD=="Yes" or Wet_AMD=="yes" %}
+            <p>As per the results, you may have <b>WET AGE-RELATED MACULAR DEGENERATION</b>follow the diet mentioned below 
+               and consult the required doctor to cure this.
+                <ul>
+                    <li>Vitamin A: carrots</li>
+                    <li>Vitamin C: citrus fruits like lemons, oranges, grapes</li>
+                    <li>Vitamin E: safflower oil, peanuts, hazelnuts, almonds, spinach, broccoli,</li>
+                    <li>Zinc: oysters, red meat, poultry, beans, whole grains, and some dairy products</li>
+                    <li>Folate: fortified foods, such as cereals or masa</li>
+                    <li>Omega3-fatty acids: flaxseed, walnuts, canola oil, and some fortified foods</li>
+                </ul>
+            </p>
+        {% endif %}            
+        {% if Dry_AMD=="Yes" or Dry_AMD=="yes"%}
+            <p>As per the results, you may have <b>DRY AGE-RELATED MACULAR DEGENERATION</b> follow the diet mentioned below 
+               and consult the required doctor to cure this.
+                <ul>
+                    <li>Vitamin C: citrus fruits,berries,melons,broccoli,tomatoes,cabbage,potatoes</li>
+                    <li>Vitamin E: vegetable oils,almonds,peanuts,wheat germ,whole grains,turnip greens</li>
+                    <li>Beta Carotene: carrot,sweet potatoes,spinach, dark leafy vegetables,squash,apricots</li>
+                    <li>Zinc: chicken,pork,liver,eggs,fortified cereals,seafood</li>
+                    <li>Copper: liver,cocoa beans,nuts,seafood,dried fruits</li>
+                </ul>
+            </p>
+        {% endif %}
+        {% if Cataract=="Yes" or Cataract=="yes"%}
+            <p>As per the results, you may have <b>CATARACT</b> follow the diet mentioned below and consult the required doctor to cure this.
+                <ul>
+                    <li>Vitamin A: carrots</li>
+                    <li>Beta carotene: boiled or baked cantaloupes,sweet potatoes,pumpkins</li>
+                    <li>Omega-3 fatty acids :fish(tuna,salmon,sardines),fish oils</li>
+                    <li>Vitamin E: almonds,walnuts,hazelnuts,peanuts,sunflower seeds</li>
+                    <li>Vitamin C: oranges,amla,guava</li>
+                </ul>
+            </p>
+        {% endif %}
+        {% if Diabetic_Retinopathy =="Yes" or Diabetic_Retinopathy=="yes" %}
+            <p>As per the analysis you have <b>DIABETIC_RETINOPATHY</b>,follow the diet mentioned below and consult the required doctor to cure this.
+        <ul>
+            <li>Vitamin A: carrots,sweet potatoes,spinach,kale,cantaloupe</li>
+            <li>Fruits and vegetables: turnip greens,corn,pumpkin,garlic,strawberris</li>
+            <li>Nuts: almonds,cashews,hazelnuts,pecans,walnuts,pistachios</li>
+            <li>Dairy products,Eggs,Turmeric,Plant-based oils</li>
+            <li>Omega-3 fatty acids</li>
+        </ul>
+        </p>
+        {% endif %}
+        {% if Glaucoma=="Yes" or Glaucoma=="yes" %}
+        <p>As per the analysis you have <b>GLAUCOMA</b>,follow the diet mentioned below and consult the required doctor to cure this.
+        <ul>
+            <li>Green leafy vegetables</li>
+            <li>Nuts: sunflower seeds,almonds,hazelnuts,pistachios</li>
+            <li>Omega3-fatty acids: salmon,tuna,sardines,halibut</li>
+            <li>Flavanols: chocolates</li>
+            <li>Tea,banana,vitamin A,vitamin C </li>
+        </ul>
+            {% endif %}
+           </p> 
+            {% if Myopia == "No" and Hypermetropia == 'No' and Wet_AMD == 'No' and Dry_AMD == "No" and Cataract == "No" and Diabetic_Retinopathy == "No" and Glaucoma == "No" %}
+                <p><b>YOUR EYE IS ABSOLUTELY PERFECT (As per the listed diseases only).</b></p>  
+                {% endif %}
+        </div>
+    </h4>
+</body>
+</div>
+</html>

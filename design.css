@@ -1,0 +1,19 @@
+body{
+    background-repeat: no-repeat;
+    text-align: center;  
+}
+#main-section{
+    background-image: url("plain.jpg");
+    background-size:1690px 600px;
+    color:rgb(21, 97, 163);
+    font-size: 20px;
+}
+#helo2{
+    color:darkgreen;
+    background-image:url("testt.jpg");
+    background-size: 1500px 500px;
+    font-size: 15px;
+}
+
+
+

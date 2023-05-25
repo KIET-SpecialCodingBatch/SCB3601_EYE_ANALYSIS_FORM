@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye analysis</title>
+        <div align=middle style="background-color:rgb(97, 184, 222); color:bisque; padding:10px; margin:10px;"> <h1><em>HAVE A LOOK ON YOUR EYE WHICH IS MAKING YOU TO HAVE A LOOK ON OTHERS</em></h1>
+                <link rel="stylesheet" type=text/css href="{{url_for('static', filename='design.css') }}"> 
+</head>
+</div>
+<body> 
+<div id="main-section">
+<div align = middle>
+<pre>
+    <form action="/display" method="POST">
+<b>Name</b>   : <input type="text" name="Name" placeholder="Enter Your Name"/>
+        <br><br>
+<b>Age</b>    : <input type="number" name="Age" placeholder="Enter your age"/>
+         <br><br>
+<b>Gender</b> : <input type="text" name="Gender" placeholder="Enter your gender"/>
+        <br><br>
+<b>Date</b>   : <input type="date" name="Date" placeholder="Enter Date"/>
+        <br><br>
+<b>Time</b>   : <input type="time" name="Time" placeholder="Enter the time"/>
+        <br><br>
+1. Enter Yes if you are not able to see distant objects clearly, else put No
+        <br><img src="/static/Myopia_.jpg" height="150px" width="200px"/>
+<input type="text" name="Myopia" placeholder="YES/NO"/>
+        <br>
+2. Enter Yes if you are not able to see near objects clearly, else put No
+        <br><img src="/static/Hyperopia.jpeg" height="150px" width="200px"/>
+<input type="text" name="Hypermetropia" placeholder="YES/NO"/>
+<br>
+3. Enter Yes if straight lines appear wavy, else put No 
+
+<img src="/static/wetamd2.jpg" height="150%" width="150px"/>
+<input type="text" name="Wet_AMD" placeholder="YES/NO"/>
+        <br>
+4. Enter Yes if your Central vision is blurred or has any tiny (yellow or white) deposits under retina
+else put No 
+
+<img src="/static/amd.jpg" height="200px" width="150px"/>
+<input type="text" name="Dry_AMD" placeholder="YES/NO"/>
+        <br>
+5. Enter Yes if you have overall blurness, else put No
+        
+<img src="/static/cataracts.jpg" height="200px" width="150px"/><br>
+<input type="text" name="Cataract" placeholder="YES/NO"/>
+        <br>
+6. Enter Yes if have Blurred vision or loss of color vision or fluctutating vision, dark spots in the field of vision
+
+<img src="/static/diabetic-retinopathy.jpg" width="150px" height="200px"/> 
+<input type="text" name="Diabetic_Retinopathy" placeholder="YES/NO"/>
+        <br>
+7. Enter Yes if you have round dark shadow, else put No
+s
+<img src="/static/glaucoma.jpg" height="200px" width="150px"/>
+<input tpe="text" name="Glaucoma" placeholder="YES/NO"/></pre>
+    <button> Submit</button>
+<br>
+</div>
+
+        <!--<input type="submit" value="Submit"/>-->
+<!--<video controls>
+    <source src="/static/WIN_20230425_18_57_47_Pro.mp4" type="/static/WIN_20230425_18_57_47_Pro.mp4">
+    <source src="/static/WIN_20230425_18_57_47_Pro.ogg" type="/static/WIN_20230425_18_57_47_Pro.ogg">
+    video not supported
+</video>-->
+    </form>
+</div>
+</body>
+</html>
